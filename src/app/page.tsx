@@ -23,6 +23,9 @@ export default function Home() {
             <a href="#pricing" className="hover:text-foreground transition-colors">
               Pricing
             </a>
+            <a href="#faq" className="hover:text-foreground transition-colors">
+              FAQ
+            </a>
             <a
               href="mailto:harris@supaleads.app"
               className="px-5 py-2 bg-accent text-background text-sm font-medium rounded-full hover:bg-accent-dim transition-colors"
@@ -47,7 +50,7 @@ export default function Home() {
             {/* Tag */}
             <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border-accent text-xs text-muted mb-8 md:mb-10">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              AI-Powered B2B Outbound Agency
+              B2B Outbound Agency
             </div>
 
             {/* Headline */}
@@ -102,7 +105,7 @@ export default function Home() {
             {[
               { value: "10+", label: "Meetings / month" },
               { value: "98%", label: "Deliverability" },
-              { value: "DFY", label: "Done for you" },
+              { value: "24/7", label: "Always on" },
             ].map((stat) => (
               <div key={stat.label} className="border-l border-border-accent pl-4 md:pl-6">
                 <div className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-accent">
@@ -139,29 +142,33 @@ export default function Home() {
                 <span className="italic text-accent">fully handled.</span>
               </h2>
               <p className="text-muted leading-relaxed max-w-md">
-                We combine AI-powered research with human-quality copywriting to
-                build outbound campaigns that land in inboxes and book meetings.
-                No templates. No spam. Just results.
+                From research to copywriting, sending, and meeting setup — we
+                handle every step of your outbound. No templates. No spam. Just
+                results.
               </p>
             </div>
 
             <div className="space-y-6">
               {[
                 {
-                  title: "Lead Research",
-                  desc: "AI identifies your ideal prospects with verified contact data and intent signals.",
+                  title: "ICP Definition & Research",
+                  desc: "We define your ideal customer profile and thoroughly research your target market.",
                 },
                 {
-                  title: "Personalized Copy",
-                  desc: "Every email crafted with context — no mass templates, no generic pitches.",
+                  title: "Prospect List Building",
+                  desc: "Build precise prospect lists with verified contact data and intent signals.",
                 },
                 {
-                  title: "Managed Delivery",
-                  desc: "Warmed domains, optimized send times, and 98%+ inbox placement.",
+                  title: "Hyper-Personalized Sequences",
+                  desc: "Craft tailored email sequences personalized for every prospect — no generic pitches.",
                 },
                 {
-                  title: "Meeting Ready",
-                  desc: "Qualified replies handled and meetings booked directly on your calendar.",
+                  title: "Email Infrastructure Setup",
+                  desc: "New domain preparation, warmup, and full email account & sending configuration.",
+                },
+                {
+                  title: "Reply Management & Alerts",
+                  desc: "We handle replies, book meetings on your calendar, drive link clicks, and notify you of interested prospects in real time.",
                 },
               ].map((item, i) => (
                 <div
@@ -207,8 +214,8 @@ export default function Home() {
             {[
               {
                 step: "01",
-                title: "Research",
-                desc: "We identify your ICP, build targeted lists, and verify every contact.",
+                title: "Define ICP",
+                desc: "We define your ideal customer profile and research your target market.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -217,8 +224,18 @@ export default function Home() {
               },
               {
                 step: "02",
-                title: "Write",
-                desc: "AI-assisted, human-refined copy personalized for every prospect.",
+                title: "Build Lists",
+                desc: "Build targeted prospect lists with verified contacts.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                  </svg>
+                ),
+              },
+              {
+                step: "03",
+                title: "Write Sequences",
+                desc: "Hyper-personalized email sequences crafted for each prospect.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -226,22 +243,13 @@ export default function Home() {
                 ),
               },
               {
-                step: "03",
-                title: "Send",
-                desc: "Emails delivered from warmed infrastructure with optimal timing.",
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                  </svg>
-                ),
-              },
-              {
                 step: "04",
-                title: "Meet",
-                desc: "Qualified meetings land on your calendar. You just show up.",
+                title: "Setup & Send",
+                desc: "New domains, warmup, email accounts, and sending — all handled for you.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 010 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 010-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 ),
               },
@@ -328,8 +336,8 @@ export default function Home() {
                   {[
                     "~10 qualified meetings per month",
                     "Full ICP research & list building",
-                    "AI-personalized email sequences",
-                    "Managed sending infrastructure",
+                    "Hyper-personalized email sequences",
+                    "Domain setup & warmup included",
                     "Reply handling & meeting booking",
                     "Weekly performance reports",
                   ].map((item) => (
@@ -352,6 +360,88 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="relative py-24 md:py-32 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-xs text-muted uppercase tracking-[0.2em] mb-4 block">
+                FAQ
+              </span>
+              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl leading-tight">
+                Frequently asked
+                <br />
+                <span className="italic text-accent">questions.</span>
+              </h2>
+            </div>
+
+            <div className="space-y-px rounded-2xl overflow-hidden">
+              {[
+                {
+                  q: "How long until I start seeing meetings?",
+                  a: "Most clients see their first qualified meetings within 2–3 weeks after launch. The first week is dedicated to domain warmup and infrastructure setup.",
+                },
+                {
+                  q: "Do I need to provide the lead lists?",
+                  a: "No. We handle everything — from defining your ICP to building and verifying the prospect lists. You just tell us who your ideal customer is.",
+                },
+                {
+                  q: "What does \"hyper-personalized\" actually mean?",
+                  a: "Every email is written with context specific to the recipient — their role, company, recent activity, and pain points. No generic templates.",
+                },
+                {
+                  q: "Do you set up the email accounts and domains?",
+                  a: "Yes. We purchase and configure new sending domains, set up email accounts, handle DNS records, and run the full warmup process before any outreach begins.",
+                },
+                {
+                  q: "What happens when a prospect replies?",
+                  a: "We handle all reply management — qualifying responses, filtering out-of-office and unsubscribes, and booking qualified meetings directly on your calendar.",
+                },
+                {
+                  q: "Is there a minimum commitment?",
+                  a: "We recommend a minimum of 3 months to see meaningful results, but there are no long-term contracts. You can cancel anytime with 30 days notice.",
+                },
+                {
+                  q: "Do you operate in my time zone?",
+                  a: "We operate 24/7 — our team works around the clock, so we cover every time zone. Whether your prospects are in New York, London, or Tokyo, we send at the right time and respond to replies without delay.",
+                },
+                {
+                  q: "What industries do you work with?",
+                  a: "We work with B2B companies across SaaS, professional services, agencies, and tech. If you sell to businesses, we can help.",
+                },
+              ].map((item, i) => (
+                <details
+                  key={i}
+                  className="group bg-surface hover:bg-surface-hover transition-colors"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer p-6 md:p-8 list-none [&::-webkit-details-marker]:hidden">
+                    <span className="font-medium pr-4">{item.q}</span>
+                    <svg
+                      className="w-5 h-5 text-muted shrink-0 transition-transform group-open:rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </summary>
+                  <div className="px-6 md:px-8 pb-6 md:pb-8">
+                    <p className="text-sm text-muted leading-relaxed max-w-2xl">
+                      {item.a}
+                    </p>
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>
