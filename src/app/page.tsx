@@ -14,7 +14,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="font-[family-name:var(--font-display)] text-2xl tracking-tight">
-            Supaleads
+            SupaLeads
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted">
             <a href="#process" className="hover:text-foreground transition-colors">
@@ -104,8 +104,8 @@ export default function Home() {
           <div className="animate-fade-up delay-500 mt-20 md:mt-28 grid grid-cols-3 gap-6 md:gap-12 max-w-2xl">
             {[
               { value: "10+", label: "Meetings / month" },
-              { value: "98%", label: "Deliverability" },
-              { value: "24/7", label: "Always on" },
+              { value: "100%", label: "Done for you" },
+              { value: "1:1", label: "Dedicated support" },
             ].map((stat) => (
               <div key={stat.label} className="border-l border-border-accent pl-4 md:pl-6">
                 <div className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-accent">
@@ -408,7 +408,7 @@ export default function Home() {
                 },
                 {
                   q: "Do you operate in my time zone?",
-                  a: "We operate 24/7 — our team works around the clock, so we cover every time zone. Whether your prospects are in New York, London, or Tokyo, we send at the right time and respond to replies without delay.",
+                  a: "Yes. Emails are sent at optimal times in your prospects' local time zones. Replies are monitored continuously, so nothing slips through the cracks regardless of where your prospects are.",
                 },
                 {
                   q: "What industries do you work with?",
@@ -473,10 +473,10 @@ export default function Home() {
       <footer className="border-t border-border py-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-[family-name:var(--font-display)] text-lg">
-            Supaleads
+            SupaLeads
           </div>
           <div className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Supaleads. All rights reserved.
+            &copy; {new Date().getFullYear()} SupaLeads. All rights reserved.
           </div>
           <a
             href="mailto:harris@supaleads.app"
