@@ -41,8 +41,8 @@ export async function GET(request: NextRequest) {
     if (leadRes.ok) {
       const leads = await leadRes.json();
       if (leads.length > 0 && leads[0].email) {
-        email = leads[0].email;
-        domain = email.split("@")[1] || null;
+        email = leads[0].email as string;
+        domain = email!.split("@")[1] || null;
         notes = `Unsubscribed via web link — ${leads[0].company || "unknown"}`;
       }
     }
