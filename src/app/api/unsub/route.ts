@@ -47,6 +47,22 @@ export async function GET(request: NextRequest) {
       }
     }
 
+    // Fallback: check inbound_leads if not found in prospect_leads
+    if (!email) {
+      const inboundRes = await fetch(
+        `${supabaseUrl}/rest/v1/inbound_leads?id=eq.${identifier}&select=email,company`,
+        { headers }
+      );
+      if (inboundRes.ok) {
+        const inbound = await inboundRes.json();
+        if (inbound.length > 0 && inbound[0].email) {
+          email = inbound[0].email as string;
+          domain = email!.split("@")[1] || null;
+          notes = `Unsubscribed via web link — ${inbound[0].company || "unknown"} (inbound)`;
+        }
+      }
+    }
+
     // 2. Check if already suppressed
     const checkFilter = email
       ? `email=eq.${encodeURIComponent(email)}&reason=eq.opted_out`
