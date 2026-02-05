@@ -304,10 +304,11 @@ export default function Home() {
                     </span>
                     <div className="flex items-baseline gap-2">
                       <span className="font-[family-name:var(--font-display)] text-6xl md:text-7xl text-foreground">
-                        $2,000
+                        $2,000~
                       </span>
                       <span className="text-muted text-lg">/mo</span>
                     </div>
+                    <span className="text-sm text-muted mt-2 block">Final pricing based on scope</span>
                   </div>
                   <a
                     href="mailto:harris@supaleads.app"
